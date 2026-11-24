@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>A Little Surprise For You ❤️</title>
+<style>
+:root{--pink:#d83f7d;--deep:#ad2e65;--ink:#75445c;--muted:#9a6b80;--line:#f7c7da}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 14px;display:grid;place-items:center;
+font-family:ui-rounded,"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);
+background:radial-gradient(circle at 15% 10%,#fff 0,transparent 28%),linear-gradient(135deg,#ffe0eb,#fff1f6 50%,#ffe8f0);
+overflow-x:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.heart{position:absolute;bottom:-35px;opacity:.55;animation:floatUp linear forwards}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(330deg);opacity:0}}
+.card{position:relative;width:min(100%,500px);padding:32px 24px 22px;background:rgba(255,255,255,.94);
+border:1px solid white;border-radius:30px;box-shadow:0 18px 55px rgba(174,55,105,.15);text-align:center;
+animation:appear .5s ease}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;color:#c17a99;margin-bottom:23px}
+.progress{height:4px;width:210px;max-width:80%;background:#f8dce7;border-radius:8px;margin:0 auto 28px;overflow:hidden}
+.progress span{display:block;width:100%;height:100%;background:linear-gradient(90deg,#f2a1bf,#ce3d7b)}
+.emoji{font-size:56px;margin-bottom:12px}
+h1{font-size:clamp(26px,6vw,33px);line-height:1.2;color:var(--deep);margin:0 0 14px}
+.message{font-size:15.5px;line-height:1.85;color:#87566f;margin:0 auto 25px;max-width:390px}
+.choices{display:grid;gap:12px}
+.choice{width:100%;padding:16px 13px;border:1px solid var(--line);border-radius:17px;background:#fff2f7;color:#b12f69;
+font:700 15px/1.4 inherit;cursor:pointer;transition:.2s}
+.choice:hover{transform:translateY(-2px);background:#ffe5ef;box-shadow:0 7px 18px #e88ab31c}
+.choice.primary{background:linear-gradient(135deg,#e95d94,#c73573);color:#fff;border:0}
+.choice small{display:block;font-size:12px;font-weight:500;opacity:.88;margin-top:5px}
+.footer{font-size:11px;letter-spacing:.5px;color:#c58ba4;margin-top:23px}
+.note{font-size:12px;color:#a4778c;line-height:1.6;margin:15px 4px 0}
+@media(max-width:380px){.card{padding:27px 17px 20px}.message{font-size:14.5px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<main class="card">
+  <div class="eyebrow">A LITTLE SURPRISE FOR YOU</div>
+  <div class="progress"><span></span></div>
+  <div class="emoji">🥺 ❤️</div>
+  <h1>Soooo... ❤️</h1>
+  <p class="message">Can we make things a little better?<br><br>
+  I wanted to send you a little something. No pressure, no big speech.
+  Just three little choices… and a message from you, if you feel like sending one. 💌</p>
+
+  <div class="choices">
+    <button class="choice primary" onclick="openWhatsApp('yes')">
+      Yes ❤️ <small>Let's talk.</small>
+    </button>
+    <button class="choice" onclick="openWhatsApp('maybe')">
+      Maybe 🙈 <small>You have a little convincing to do.</small>
+    </button>
+    <button class="choice" onclick="openWhatsApp('angry')">
+      Still angry 😤 <small>I'm not ready to let it go just yet.</small>
+    </button>
+  </div>
+
+  <p class="note">Choose whichever feels true. Your WhatsApp will open with a message ready for you to review and send. Nothing is sent automatically. ❤️</p>
+  <div class="footer">MADE WITH CARE, AND A LITTLE EXTRA LOVE ❤️</div>
+</main>
+
+<script>
+const links = {
+  yes: "https://wa.me/919026217441?text=I%20clicked%20YES%20%E2%9D%A4%EF%B8%8F%F0%9F%A5%BA%0A%0AI%E2%80%99m%20ready%20to%20talk%20to%20you.%20Honestly%2C%20I%20still%20have%20a%20few%20feelings%20and%20thoughts%20in%20my%20heart%2C%20but%20I%20don%27t%20want%20a%20misunderstanding%20or%20a%20difficult%20moment%20to%20become%20bigger%20than%20what%20we%20share.%0A%0AI%20want%20us%20to%20sit%20down%2C%20talk%20openly%2C%20and%20understand%20each%20other%20without%20ego%2C%20arguments%2C%20or%20interruptions.%20I%20want%20to%20tell%20you%20how%20I%20feel%2C%20and%20I%20want%20to%20hear%20what%E2%80%99s%20going%20on%20in%20your%20heart%20too.%0A%0AI%20appreciate%20you%20making%20an%20effort%20to%20reach%20out%20to%20me.%20It%20means%20something%20when%20someone%20doesn%27t%20just%20say%20they%20care%2C%20but%20actually%20tries%20to%20show%20it.%0A%0ASo%20yes%2C%20let%27s%20talk.%20A%20little%20patience%2C%20a%20little%20honesty%2C%20and%20a%20lot%20of%20understanding.%20I%20hope%20we%20can%20make%20things%20better%2C%20one%20conversation%20at%20a%20time.%20%E2%9D%A4%EF%B8%8F%F0%9F%AB%82",
+  maybe: "https://wa.me/919026217441?text=I%20clicked%20MAYBE%20%F0%9F%99%88%E2%9D%A4%EF%B8%8F%0A%0AWell%E2%80%A6%20I%27m%20not%20saying%20everything%20is%20okay%20just%20yet.%20You%20still%20have%20a%20little%20convincing%20to%20do%21%20But%20I%20did%20notice%20that%20you%27re%20trying%2C%20and%20I%20won%27t%20pretend%20that%20it%20doesn%27t%20make%20me%20feel%20a%20little%20softer.%0A%0AI%20don%27t%20need%20grand%20gestures%20or%20perfect%20lines.%20What%20matters%20to%20me%20is%20genuine%20effort%2C%20your%20time%2C%20your%20attention%2C%20and%20knowing%20that%20you%20really%20want%20to%20understand%20me.%0A%0ASo%20here%27s%20your%20chance%3A%20talk%20to%20me%20properly%2C%20make%20me%20smile%20with%20your%20silly%20little%20ways%2C%20and%20most%20importantly%2C%20listen%20to%20what%20I%20have%20to%20say.%20Don%27t%20rush%20me%2C%20don%27t%20make%20excuses%2C%20and%20don%27t%20turn%20it%20into%20a%20competition%20about%20who%27s%20right.%0A%0AMaybe%20I%27m%20still%20a%20little%20upset%E2%80%A6%20but%20maybe%20I%27m%20also%20willing%20to%20give%20us%20a%20chance%20to%20understand%20each%20other%20better.%20Now%20let%27s%20see%20what%20you%20do%20with%20that%20chance.%20%F0%9F%A5%BA%F0%9F%92%95",
+  angry: "https://wa.me/919026217441?text=I%20clicked%20STILL%20ANGRY%20%F0%9F%98%A4%E2%9D%A4%EF%B8%8F%0A%0AI%27m%20still%20upset%2C%20and%20I%20don%27t%20want%20to%20pretend%20that%20everything%20is%20fine%20just%20to%20make%20the%20moment%20easier.%20Something%20has%20affected%20me%2C%20and%20I%20need%20you%20to%20understand%20that%20my%20feelings%20are%20real%20and%20deserve%20to%20be%20heard.%0A%0AI%27m%20not%20asking%20you%20to%20have%20all%20the%20answers%20immediately.%20I%20just%20want%20you%20to%20listen%20patiently%2C%20try%20to%20understand%20why%20I%20feel%20this%20way%2C%20and%20not%20dismiss%20my%20feelings%20or%20respond%20with%20arguments%20and%20excuses.%0A%0AIf%20you%20made%20a%20mistake%2C%20what%20would%20mean%20the%20most%20to%20me%20is%20seeing%20that%20you%20understand%20it%20and%20genuinely%20want%20to%20do%20better.%20Sweet%20words%20can%20make%20me%20smile%20for%20a%20moment%2C%20but%20consistent%20care%2C%20respect%2C%20and%20effort%20are%20what%20really%20matter.%0A%0AI%20may%20need%20a%20little%20time%2C%20and%20I%20hope%20you%20can%20respect%20that.%20When%20I%27m%20ready%2C%20I%20want%20us%20to%20have%20an%20honest%20conversation%20where%20we%20both%20feel%20heard.%0A%0AI%20care%20about%20what%20we%20share%2C%20but%20I%20also%20want%20my%20feelings%20to%20matter.%20%F0%9F%A4%8D"
+};
+
+function openWhatsApp(choice) {
+  const url = links[choice];
+  if (!url) return;
+  window.location.href = url;
+}
+
+const heartLayer = document.getElementById("hearts");
+function addHeart() {
+  const el = document.createElement("span");
+  el.className = "heart";
+  el.textContent = ["♡","♥","✿","✨"][Math.floor(Math.random()*4)];
+  el.style.left = Math.random()*100 + "%";
+  el.style.fontSize = (14 + Math.random()*17) + "px";
+  el.style.animationDuration = (8 + Math.random()*7) + "s";
+  heartLayer.appendChild(el);
+  setTimeout(() => el.remove(), 16000);
+}
+setInterval(addHeart, 850);
+</script>
+</body>
+</html>
